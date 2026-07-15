@@ -1,0 +1,81 @@
+/* RestaurantCard.css */
+.rcard {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+  animation: fadeUp 0.4s ease both;
+}
+.rcard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-hover);
+}
+
+.rcard-header {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.rcard-emoji { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9); }
+.rcard-discount {
+  position: absolute;
+  top: 12px; left: 12px;
+  background: var(--pink);
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(215,15,100,0.3);
+}
+
+.rcard-body { padding: 14px 16px 16px; }
+.rcard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+  gap: 8px;
+}
+.rcard-name {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+.rcard-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.rcard-rating strong { color: var(--text); font-weight: 800; }
+.rcard-reviews { color: var(--text-sub); font-size: 12px; }
+.rcard-cuisine { font-size: 13px; color: var(--text-sub); margin-bottom: 10px; }
+.rcard-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-sub);
+  margin-bottom: 10px;
+}
+.rcard-meta-item { font-weight: 600; }
+.rcard-sep { color: var(--text-light); }
+.free-delivery { color: #1aab5e; font-weight: 700; }
+.rcard-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.rcard-tag {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: var(--pink-pale);
+  color: var(--pink);
+}

@@ -1,0 +1,39 @@
+/* CategoryFilter.css */
+.cat-wrap { margin: 0 auto 24px; }
+.cat-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 4px 0 10px;
+}
+.cat-scroll::-webkit-scrollbar { display: none; }
+
+.cat-item {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: var(--white);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  padding: 12px 18px;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  transition: all var(--transition);
+  min-width: 80px;
+}
+.cat-item:hover {
+  border-color: var(--pink);
+  transform: translateY(-2px);
+  box-shadow: var(--card-hover);
+}
+.cat-item.active {
+  background: var(--pink-pale);
+  border-color: var(--pink);
+  color: var(--pink);
+}
+.cat-emoji { width: 30px; height: 30px; object-fit: cover; border-radius: 50%; }
+.cat-label { font-size: 12px; font-weight: 700; color: var(--text); white-space: nowrap; }
+.cat-item.active .cat-label { color: var(--pink); }

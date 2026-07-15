@@ -1,0 +1,42 @@
+/* PromoBanner.css */
+.promo-section {
+  margin: 28px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+.promo-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(.4,0,.2,1);
+}
+.promo-slide {
+  min-width: 100%;
+  border-radius: var(--radius-lg);
+  padding: 28px 36px;
+  color: white;
+}
+.promo-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.promo-emoji { width: 64px; height: 64px; object-fit: cover; border-radius: 50%; border: 3px solid rgba(255,255,255,0.7); }
+.promo-title {
+  font-family: var(--font-head);
+  font-size: 28px;
+  font-weight: 800;
+}
+.promo-sub { font-size: 15px; opacity: 0.85; font-weight: 500; margin-top: 3px; }
+.promo-dots {
+  position: absolute;
+  bottom: 14px; right: 20px;
+  display: flex; gap: 6px;
+}
+.promo-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  border: none;
+  transition: all 0.3s;
+}
+.promo-dot.active { background: white; width: 22px; border-radius: 4px; }
